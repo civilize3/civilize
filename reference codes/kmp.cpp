@@ -10,7 +10,7 @@ vector<int> getPi(string target) {
     pi.push_back(0);
     for (unsigned int i = 1, m = 0 ; i < len ; i++) {
         while (m > 0 && target[i] != target[m]) m = pi[m - 1];
-        if (target[i] == target[m]) pi[i] = ++m;
+        if (target[i] == target[m]) ++m;
         pi.push_back(m);
     }
     return pi;
